@@ -2,9 +2,7 @@ package utilities;
 
 import exceptions.EmptyQueueException;
 
-import Utilities.MyArrayList;
-import Utilities.MyQueue;
-import Utilities.MyStack;
+import utilities.*;
 
 public class XMLParser {
 	
