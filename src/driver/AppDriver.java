@@ -24,6 +24,7 @@ public class AppDriver {
 		}
 		
 		String filePath = args[0];
+		
 		new Manager(filePath);
 	}
 
