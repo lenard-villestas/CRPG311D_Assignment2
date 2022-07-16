@@ -3,21 +3,20 @@
  */
 package manager;
 
+import utilities.XMLParser;
+
 /**
  * @author Lenard
  *
  */
 public class Manager {
 	
-	private String filePath;
+	XMLParser xp;
 	
-	public Manager() {
-		
-	}
+	
 	public Manager(String filePath) {
-		this.filePath = filePath;
 		
-		System.out.println(filePath);
+		xp = new XMLParser(filePath);
 	}
 	
 	
