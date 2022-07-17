@@ -34,5 +34,22 @@ public class MyDLLNode<E> {
 	public void setNext (MyDLLNode next) {
 		this.next = next;
 	}
-
+	
+	public boolean hasNext() {
+		return (this.next != null);
+	}
+	
+	public boolean hasPrev() {
+		return (this.next != null);
+	}
+	
+	@Override
+	public boolean equals(Object e) {
+		
+		if (this.data.equals(e)) {
+			return true;
+		}
+		
+		return false;
+	}
 }

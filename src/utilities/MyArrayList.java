@@ -79,7 +79,7 @@ public class MyArrayList<E> implements ListADT<E> {
 			size++;
 			return true;
 		}
-
+		
 		return false;
 	}
 
