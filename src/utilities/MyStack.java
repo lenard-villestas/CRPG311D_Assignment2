@@ -62,18 +62,20 @@ public class MyStack<E> implements StackADT<E> {
 	@Override
 	public int search(E toFind) {
 		int i = 0;
-		while (iterator().hasNext()) {
-			if (toFind == iterator().next()) {
+		iter = (MyIterator) iterator();
+		while (iter.hasNext()) {
+			if (toFind.equals(iter.next())) {
 				return i;
 			}
 			i++;
 		}
+		
 		return -1;
 	}
 
 	@Override
 	public Iterator<E> iterator() {
-		return iter = new MyIterator (Arr.toArray());
+		return new MyIterator (Arr.toArray());
 	}
 
 	@Override

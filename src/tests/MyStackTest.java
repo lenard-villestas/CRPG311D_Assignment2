@@ -156,4 +156,14 @@ public class MyStackTest {
 		assertTrue(myStack.contains(three));
 		assertFalse(myStack.contains("Five"));
 	}
+	
+	@Test
+	public void test_search() {
+		myStack.push(one);
+		myStack.push(two);
+		myStack.push(three);
+		
+		assertEquals(2,myStack.search(three));
+		assertEquals(-1,myStack.search("five"));
+	}
 }

@@ -3,25 +3,35 @@ package utilities;
 import java.lang.reflect.Array;
 
 import exceptions.*;
-
+/**
+ * The class of type MyDLL with the methods to navigate through our custom DLL
+ * @author Lenard, Group1
+ *
+ * @param <E>
+ */
 public class MyDLL<E> implements ListADT<E> {
 
 	private int size;
 	private MyIterator iterator;
 	MyDLLNode head;
 	MyDLLNode tail;
-
+	
+	/**
+	 * Default constructor of an empty DLL where we set head, tail to null and size to 0
+	 */
 	public MyDLL() {
 
 		head = null;
 		tail = null;
 		size = 0;
 	}
-
+	
+	@Override
 	public int size() {
 		return size;
 	}
-
+	
+	@Override
 	public void clear() {
 		size = 0;
 		head = null;
@@ -30,6 +40,7 @@ public class MyDLL<E> implements ListADT<E> {
 	}
 
 	/**
+	 * Get the head of DLL
 	 * @return the head
 	 */
 	public MyDLLNode getHead() {
@@ -37,6 +48,7 @@ public class MyDLL<E> implements ListADT<E> {
 	}
 
 	/**
+	 * SET THE HEAD OF DLL
 	 * @param head the head to set
 	 */
 	public void setHead(MyDLLNode head) {
@@ -44,6 +56,7 @@ public class MyDLL<E> implements ListADT<E> {
 	}
 
 	/**
+	 * get the tail of DLL
 	 * @return the tail
 	 */
 	public MyDLLNode getTail() {
@@ -51,12 +64,18 @@ public class MyDLL<E> implements ListADT<E> {
 	}
 
 	/**
+	 * Set the tail of DLL
 	 * @param tail the tail to set
 	 */
 	public void setTail(MyDLLNode tail) {
 		this.tail = tail;
 	}
-
+	
+	/**
+	 * Psuedo Iterator to get to position in our DLL
+	 * @param index
+	 * @return MyDLLNode pointer, the node in the specified index
+	 */
 	public MyDLLNode getNodeIndex(int index) {
 
 		int i = 0;
@@ -77,7 +96,7 @@ public class MyDLL<E> implements ListADT<E> {
 		return pointer;
 	}
 
-	/**
+	/*
 	 * add to index
 	 */
 	@Override
@@ -133,7 +152,7 @@ public class MyDLL<E> implements ListADT<E> {
 		return false;
 	}
 
-	/**
+	/*
 	 * adds a new node to tail position
 	 */
 	@Override
@@ -175,7 +194,7 @@ public class MyDLL<E> implements ListADT<E> {
 		return false;
 	}
 
-	/**
+	/*
 	 * Iterates to an array while adding them to our DLL
 	 */
 	@Override
@@ -257,7 +276,7 @@ public class MyDLL<E> implements ListADT<E> {
 		return null;
 	}
 
-	/**
+	/*
 	 * remove node that contains this element E
 	 */
 	@Override
@@ -286,7 +305,7 @@ public class MyDLL<E> implements ListADT<E> {
 		return null;
 	}
 
-	/**
+	/*
 	 * replaces the node data at the index position, will return the old data
 	 */
 	@Override
@@ -332,7 +351,7 @@ public class MyDLL<E> implements ListADT<E> {
 		return false;
 	}
 
-	/**
+	/*
 	 * returns the given array with the DLL's Nodes inside
 	 */
 	@Override
@@ -355,7 +374,7 @@ public class MyDLL<E> implements ListADT<E> {
 		return toHold;
 	}
 
-	/**
+	/*
 	 * put the elements in this DLL to an array
 	 */
 	@Override
