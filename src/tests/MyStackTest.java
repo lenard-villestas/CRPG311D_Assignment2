@@ -15,9 +15,15 @@ import utilities.MyArrayList;
 import utilities.*;
 import org.junit.*;
 
+/**
+ * JUnit test set for Stack implementation
+ * @author Lenard
+ *
+ */
 public class MyStackTest {
 	// Test objects
 	private static MyStack<String> myStack;
+	private static MyStack<String> myStack2;
 	private String one;
 	private String two;
 	private String three;
@@ -25,16 +31,19 @@ public class MyStackTest {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		myStack = new MyStack<String>();
+		myStack2 = new MyStack<String>();
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
 		myStack=null;
+		myStack2=null;
 	}
 
 	@Before
 	public void setUp() throws Exception {
 		myStack = new MyStack<String>();
+		myStack2 = new MyStack<String>();
 		one = "one";
 		two = "two";
 		three = "three";
@@ -165,5 +174,18 @@ public class MyStackTest {
 		
 		assertEquals(2,myStack.search(three));
 		assertEquals(-1,myStack.search("five"));
+	}
+	
+	@Test
+	public void test_equals() {
+		myStack.push(one);
+		myStack.push(two);
+		myStack.push(three);
+		
+		myStack2.push(one);
+		myStack2.push(two);
+		myStack2.push(three);
+		
+		assertTrue(myStack.equals(myStack2));
 	}
 }

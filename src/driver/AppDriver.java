@@ -5,6 +5,7 @@ package driver;
 import manager.Manager;
 
 /**
+ * AppDriver Class where our main method is, this starts the program
  * @author Lenard
  *
  */

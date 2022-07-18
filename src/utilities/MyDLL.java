@@ -242,7 +242,7 @@ public class MyDLL<E> implements ListADT<E> {
 			this.tail = newNode;
 
 			size--;
-			return (E) oldNode;
+			return (E) oldNode.getData();
 
 		}
 		// if index is to be removed is head
@@ -255,7 +255,7 @@ public class MyDLL<E> implements ListADT<E> {
 
 			size--;
 
-			return (E) oldNode;
+			return (E) oldNode.getData();
 
 		}
 
@@ -270,7 +270,7 @@ public class MyDLL<E> implements ListADT<E> {
 			newNextNode.setPrev(newNodePrevious);
 
 			size--;
-			return (E) oldNode;
+			return (E) oldNode.getData();
 		}
 
 		return null;

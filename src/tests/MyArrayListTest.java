@@ -12,7 +12,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import utilities.MyArrayList;
-
+/**
+ * JUnit test set for ArryList implementation
+ * @author Lenard,Group1
+ *
+ */
 public class MyArrayListTest {
 	
 	// Test objects

@@ -16,6 +16,11 @@ import org.junit.Test;
 
 import utilities.MyDLL;
 
+/**
+ * JUnit test set for DLL implementation
+ * @author Lenard
+ *
+ */
 public class MyDLLTests {
 	
 	// Test objects

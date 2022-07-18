@@ -2,6 +2,12 @@ package utilities;
 import java.util.*;
 import java.util.EmptyStackException;
 
+/**
+ * Class of MyStack type that implements stackADT and uses MyArrayList
+ * @author Lenard,group1
+ *
+ * @param <E>
+ */
 public class MyStack<E> implements StackADT<E> {
 	
 	public MyArrayList<E> Arr = new MyArrayList <E>();
@@ -80,10 +86,18 @@ public class MyStack<E> implements StackADT<E> {
 
 	@Override
 	public boolean equals(StackADT<E> that) {
-		if (Arr.toArray().equals(that.toArray()) ) {
-			return true;
+		Object[] arr1 = this.toArray();
+		Object[] arr2 = that.toArray();
+		if (arr1.length != arr2.length) {
+			return false;
 		}
-		return false;
+		for (int i =0; i< arr1.length; i++) {
+			if(arr1[i] != arr2[i]) {
+				return false;
+			}
+		}
+		
+		return true;
 	}
 
 	@Override

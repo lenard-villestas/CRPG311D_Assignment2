@@ -6,6 +6,7 @@ package manager;
 import utilities.XMLParser;
 
 /**
+ * Manager class for invoking functions
  * @author Lenard
  *
  */
