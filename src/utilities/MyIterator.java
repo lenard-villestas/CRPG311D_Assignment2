@@ -2,6 +2,12 @@ package utilities;
 
 import java.util.NoSuchElementException;
 
+/**
+ * Utility class for iterating an array
+ * @author Lenard
+ *
+ * @param <E>
+ */
 public class MyIterator<E> implements Iterator<E> {
 
 	private E[] list;

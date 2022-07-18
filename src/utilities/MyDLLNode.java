@@ -1,6 +1,6 @@
 package utilities;
 /**
- * 
+ * Class for DLLNode used by myDLL to be used as elemen containers for a doubly linked list
  * @author Lenard, Group1
  *
  * @param <E>
