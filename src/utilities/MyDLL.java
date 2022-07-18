@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 
 import exceptions.*;
 /**
- * The class of type MyDLL with the methods to navigate through our custom DLL
+ * The class of type MyDLL with the methods to navigate through our custom DLL. This is Doubly Linked List that utilizes Nodes for its element containers, allowing for faster shifting of postions.
  * @author Lenard, Group1
  *
  * @param <E>

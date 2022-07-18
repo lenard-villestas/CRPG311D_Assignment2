@@ -4,13 +4,22 @@ import java.lang.reflect.Array;
 
 import exceptions.*;
 
+/**
+ * Class of MyArrayList type, implements ListADT and uses iterator. This is a linear data structure that is dynamic in terms of capacity/sizing.
+ * @author Lenard
+ *
+ * @param <E>
+ */
 public class MyArrayList<E> implements ListADT<E> {
 	private int size;
 	private E[] data;
 	private final int DEFAULT_SIZE = 10;
 	private MyIterator iterator;
 
-	// initialize with size
+	/**
+	 * MyArrayList Constructor for initializing with a determined size, 
+	 * @param int size to set the array size
+	 */
 	public MyArrayList(int size) throws WrongValueException {
 		if (size <= 0) {
 			throw new WrongValueException("Size cannot be negative or 0");
@@ -19,7 +28,9 @@ public class MyArrayList<E> implements ListADT<E> {
 		}
 	}
 
-	// initialize without size
+	/**
+	 * MyArrayList Constructor for initializing without size
+	 */
 	public MyArrayList() {
 		data = (E[]) new Object[DEFAULT_SIZE];
 	}
@@ -39,7 +50,10 @@ public class MyArrayList<E> implements ListADT<E> {
 
 	}
 
-	// dynamically increase data array size
+	/**
+	 * utility method for this class to, dynamically increase data array size by copying and creating a new array that can accommodate the new elements
+	 * @param newCap
+	 */
 	public void increaseCap(int newCap) {
 		int currentCap = data.length;
 
